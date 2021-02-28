@@ -149,7 +149,7 @@ export default function ConvertArea() {
       <p>O conversor não aceita dados aninhados, porém aceita arrays de objetos.</p>
       <p> O Conversor não aceita Jsons escritos de maneira errada nem em branco, gerando assim um aviso. </p>
       <h3>Exemplos</h3>
-      {exemplo.map( (ex) => { return <p>{ex}</p> })}
+      {exemplo.map( (ex, i) => { return <p> {i+1} )   {ex}</p> })}
     </ContainerTitulo>
 
     <CodeArea>
