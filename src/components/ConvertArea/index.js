@@ -5,7 +5,10 @@ import {ContainerTitulo, CodeArea } from './styles'
 export default function ConvertArea() {
   const [jsonData, setJsonData ] = useState({});
   const [showCsv, setShowCsv ] = useState(false);
-  const exemplo = [ '{"nome": "Arthur", "idade": "21" }',  '[{ "name": "Arthur", "idade": "21" }, { "name": "João", "idade": "22" }]' ]
+  const exemplo = [ '{"nome": "Arthur", "idade": "21" }',
+    '[{ "name": "Arthur", "idade": "21" }, { "name": "João", "idade": "22" }]',
+    '[{ "name": "Arthur", "idade": "21" }, { "name": "João", "idade": "22" }, { "name": "João", "idade": "22", "estado": "mg" }]' 
+  ]
 
   function getValueOfTextArea() {
     setShowCsv(false);
