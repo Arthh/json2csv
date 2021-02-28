@@ -2,9 +2,10 @@
 import React, {useState} from 'react';
 import {ContainerTitulo, CodeArea } from './styles'
 
-function Main() {
+export default function ConvertArea() {
   const [jsonData, setJsonData ] = useState({});
   const [showCsv, setShowCsv ] = useState(false);
+  const exemplo = [ '{"nome": "Arthur", "idade": "21" }',  '[{ "name": "Arthur", "idade": "21" }, { "name": "João", "idade": "22" }]' ]
 
   function getValueOfTextArea() {
     setShowCsv(false);
@@ -142,6 +143,10 @@ function Main() {
     <>
      <ContainerTitulo>
       <h1>Conversor de Json para CSV </h1>
+      <p>O conversor não aceita dados aninhados, porém aceita arrays de objetos.</p>
+      <p> O Conversor não aceita Jsons escritos de maneira errada nem em branco, gerando assim um aviso. </p>
+      <h3>Exemplos</h3>
+      {exemplo.map( (ex) => { return <p>{ex}</p> })}
     </ContainerTitulo>
 
     <CodeArea>
@@ -170,4 +175,3 @@ function Main() {
   )
   
 }
-export default Main;

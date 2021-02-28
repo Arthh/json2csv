@@ -11,6 +11,10 @@ export const ContainerTitulo = styled.div`
     margin-top: 1.8%;
     padding-bottom: 12px;
     color: #274653;
+ }  
+
+  p {
+   margin:5px 5px;
  }
 
 `
